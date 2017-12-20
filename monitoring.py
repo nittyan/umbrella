@@ -3,7 +3,7 @@ import ConfigParser
 import RPi.GPIO as GPIO
 from time import sleep
 
-from face import find_face
+from face import find_face_with_mosaic
 from camera import Camera
 from uploader import Uploader
 
@@ -37,7 +37,7 @@ def monitor():
         
 def find_faces(paths):
     for path in paths:
-        find_face(path)
+        find_face_with_mosaic(path)
         
 
 def upload(bucket_name, paths):
