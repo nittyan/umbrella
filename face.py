@@ -2,9 +2,6 @@ import cv2
 from cv2 import CascadeClassifier
 
 
-def main():
-    find_face('face.jpg')
-
 def find_face_with_mosaic(img_path):
     classifier = create_classifier()
     origin, grayed = read_and_gray(img_path)
@@ -38,6 +35,3 @@ def mozaic(img):
     exp = cv2.resize(shrinked, cut, interpolation=cv2.INTER_NEAREST)
     return exp
 
-
-if __name__ == '__main__':
-    main()
